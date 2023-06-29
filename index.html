@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="./img/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./output/tailwindstyle.css" />
+    <title>Newsletter Sign Up</title>
+  </head>
+  <body class="font-roboto bg-bgMobile md:bg-bgDesktop">
+    <div class="min-h-screen flex justify-center items-center md:py-5 xl:py-0">
+      <div
+        id="sign-up"
+        class="w-full flex flex-col-reverse items-center space-y-10 space-y-reverse bg-white rounded-[20px] pb-5 mx-5 lg:mx-0 md:py-5 md:w-auto md:min-w-[700px] md:flex-row md:space-y-0 md:space-x-10 xl:py-0"
+      >
+        <div class="w-full px-5 md:w-1/2 md:px-0 md:pl-20">
+          <h1 class="text-button text-4xl font-bold mb-8 md:text-5xl">
+            Stay updated!
+          </h1>
+          <p class="text-button mb-8">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+          <div class="space-y-4 mb-8 md:space-y-5 md:mb-9">
+            <div class="flex items-center space-x-3 md:space-x-4">
+              <img src="./img/icon-list.svg" alt="success icon" />
+              <p class="text-button">
+                Product discovery and building what matters
+              </p>
+            </div>
+            <div class="flex items-center space-x-3 md:space-x-4">
+              <img src="./img/icon-list.svg" alt="success icon" />
+              <p class="text-button">
+                Measuring to ensure updates are a success
+              </p>
+            </div>
+            <div class="flex items-center space-x-3 md:space-x-4">
+              <img src="./img/icon-list.svg" alt="success icon" />
+              <p class="text-button">And much more!</p>
+            </div>
+          </div>
+
+          <div>
+            <div class="flex justify-between items-center mb-2">
+              <label class="text-gray font-bold">Email address</label>
+              <p id="error-message" class="text-tomato text-sm font-bold"></p>
+            </div>
+            <div class="space-y-7">
+              <input
+                type="text"
+                id="email"
+                class="w-full p-[18px] border border-gray rounded-[8px] text-bgMobile placeholder:text-gray placeholder:font-bold focus:border-bgMobile"
+                placeholder="email@company.com"
+              />
+
+              <button
+                id="button"
+                class="w-full bg-button text-white py-[18px] rounded-[8px] cursor-pointer transition duration-200 ease-in-out font-bold hover:bg-tomato hover:shadow-[5px_10px_10px_hsla(4_100%_67%_0.4)]"
+              >
+                Subscribe to our monthly newsletter
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 md:py-5 md:pr-5">
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcset="./img/illustration-sign-up-mobile.svg"
+              class="w-full max-w-full"
+            />
+            <img
+              src="./img/illustration-sign-up-desktop.svg"
+              alt="illustration"
+              class="max-w-full w-full md:h-[500px] min-[1400px]:h-auto"
+            />
+          </picture>
+        </div>
+      </div>
+
+      <div
+        id="success-box"
+        class="bg-white w-full h-full hidden flex-col justify-center relative rounded-[20px] md:w-[500px] md:h-auto md:p-8 md:shadow-[2px_2px_10px_rgba(0_0%_0%_0.4)]"
+      >
+        <div class="px-5">
+          <div class="mb-8 md:mb-10">
+            <img src="./img/icon-success.svg" alt="success icon" />
+          </div>
+
+          <div class="space-y-8 md:space-y-9 md:mb-10">
+            <h1 class="text-button text-4xl font-bold mb-8 md:text-5xl">
+              Thanks for subscribing!
+            </h1>
+            <p class="text-button">
+              A confirmation email has been sent to ash@loremcompany.com. Please
+              open it and click the button inside to confirm your subscription.
+            </p>
+          </div>
+        </div>
+
+        <div class="w-full px-5 absolute bottom-5 md:static">
+          <button
+            id="dismiss-message"
+            class="w-full bg-button text-white py-[18px] rounded-[8px] cursor-pointer transition duration-200 ease-in-out font-bold hover:bg-tomato hover:shadow-[5px_10px_10px_hsla(4_100%_67%_0.4)]"
+          >
+            Dismiss message
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>
